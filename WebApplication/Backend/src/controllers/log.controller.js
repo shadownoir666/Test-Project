@@ -2,8 +2,21 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import { Log } from "../models/Log.model.js";
+import { v4 as uuidv4 } from "uuid";
 
-import { v4 as uuidv4 } from 'uuid';
+// const createLog = asyncHandler(async (req, res) => {
+//     const logData = req.body;
+
+//     if (!logData) {
+//         throw new ApiError(400, "Log data is required");
+//     }
+
+//     const log = await Log.create(logData);
+
+//     return res.status(201).json(
+//         new ApiResponse(201, log, "Log created successfully")
+//     )
+// })
 
 const createLog = asyncHandler(async (req, res) => {
     const logData = req.body;
