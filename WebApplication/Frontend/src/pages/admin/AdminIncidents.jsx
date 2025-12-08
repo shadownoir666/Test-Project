@@ -353,4 +353,3 @@ const AdminIncidents = () => {
 };
 
 export default AdminIncidents;
-
